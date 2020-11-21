@@ -1,7 +1,33 @@
 INSERT INTO `departments` (`Department_id`, `Department_Name`, `Manager_ID`, `Location_id`) 
-VALUES ('20', 'Marketing', '201', '1800'), ('50', 'Shipping', '124', '1500'),('60','IT','103','1400'),('80','Sales','149','2500'),('90','Executive','100','1700'),('110','Accounting','205','1700'),('190','Contracting','NULL','1700');
+VALUES ('20', 'Marketing', '201', '1800'),
+('50', 'Shipping', '124', '1500'),
+('60','IT','103','1400'),
+('80','Sales','149','2500'),
+('90','Executive','100','1700'),
+('110','Accounting','205','1700'),
+('190','Contracting','NULL','1700');
 
 
 
 CREATE TABLE `cse311l_section_2_fall_20`.`employees` ( `Employee_ID` INT(6) NULL DEFAULT NULL , `First_Name` VARCHAR(20) NULL DEFAULT NULL , `Last_Name` VARCHAR(25) NULL DEFAULT NULL , `Email` VARCHAR(25) NULL DEFAULT NULL , `Phone_Number` VARCHAR(15) NULL DEFAULT NULL , `Hire_Date` DATE NULL DEFAULT NULL , `Job_ID` VARCHAR(10) NULL DEFAULT NULL , `Salary` INT(8) NULL DEFAULT NULL , `Commission_pct` FLOAT NULL DEFAULT NULL , `Manager_ID` INT(6) NULL DEFAULT NULL , `Department_ID` INT(4) NULL DEFAULT NULL )
-VALUE (`Employee_ID`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Hire_Date`, `Job_ID`, `Salary`, `Commission_pct`, `Manager_ID`, `Department_ID`) VALUES ('101', 'Neena', 'Kochhar', 'NKOCHAAR', '515.123.4568', '1989-09-21', 'AD_VP', '17000', NULL, '100', '90'), ('102', 'Lex', 'De Haan', 'LDEHAAN', '515.123.4569', '1993-01-13', 'AD_VP', '17000', '', '100', '90'), ('103', 'Alexander', 'Hunold', 'AHUNOLD', '590.423.4567', '1990-01-03', 'IT_PROG', '9000', NULL, '102', '60'), ('104', 'Bruce', 'Ernst', 'BERNST', '590.423.4568', '1991-03-21', 'IT_PROG', '6000', NULL, '103', '60'), ('107', 'Diana', 'Lorentz', 'DLORENTZ', '590.423.5567', '1999-02-07', 'IT_PROG', '4200', NULL, '103', '60'), ('124', 'Kevin', 'Mourgos', 'KMOURGOS', '650.123.5234', '1999-11-16', 'ST_MAN', '5800', NULL, '100', '50'), ('141', 'Trenna', 'Rajs', 'TRAJS', '650.121.8009', '1995-10-17', 'ST_CLERK', '3500', NULL, '124', '50'), ('142', 'Curtis', 'Davies', 'CDAVIES', '650.121.2994', '1997-01-29', 'ST_CLERK', '3100', NULL, '124', '50'), ('143', 'Randail', 'Matos', 'RMATOS', '650.121.2874', '1998-03-15', 'ST_CLERK', '2600', NULL, '124', '50'), ('144', 'Peter', 'Vargas', 'PVARGAS', '650.121.2004', '1998-07-09', 'ST_CLERK', '2500', NULL, '124', '50'), ('149', 'Elani', 'Zlotkey', 'EZLOTKEY', '011.44.1344.429018', '2000-01-29', 'SA_MAN', '10500', '0.2', '100', '80'), ('174', 'Ellen', 'Abel', 'EABEL', '011.44.1644.429267', '1996-05-11', 'SA_REP', '11000', '0.3', '149', '80'), ('176', 'Jonathon', 'Taylor', 'JTAYLOR', '011.44.1644.429265', '1998-03-24', 'SA_REP', '8600', '0.2', '149', '80'), ('178', 'Kimberely', 'Grant', 'KGRANT', '011.44.1644.429263', '');
+INSERT INTO `employees`(`Employee_ID`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Hire_Date`, `Job_ID`, `Salary`, `Commission_pct`, `Manager_ID`, `Department_ID`) 
+VALUES ('102','Lex','De Haan','DEHAAN','515.123.4569','2009-01-13','AD_VP','17000','','100','90'),
+('103','Alexader','Hunold','AHUNOLD','590.423.4567','2008-01-03','IT_PROG','9000',' ','102','60'), 
+('104','Bruce','Ernst','BERNST','590.423.4568','2009-05-21','IT_PROG','6000','','103','60'),
+('107','Diana','Lorentz','DLORENTZ','590.423.5567','2008-02-07','IT_PROG','4200',' ','103','60'),
+('124','Kevin','Mourgos','KMURGOS','650.123.5234','2012-11-16','ST_MAN','5800',' ','100','50'),
+('141','Treena','Rajs','RRAJS','650.121.5234','2004-10-17','ST_CLERK','3500',' ','124','50'),
+('142','Curtis','Davies','CDAVIES','121.123.5234','2007-01-29','ST_CLERK','3100','','124','50'), 
+('143','Randall','Matos','RMATOS','121.123.5234','2008-03-15','ST-CLERK','2600','','124','50'), 
+('144','Peter','Vargas','PVARGAS','121.123.5234','2008-07-09','ST_CLERK','2500','','124','50'), 
+('149','Eleni','Zlotkey','EZLOTKEY','44.1344.429018','2014-01-29','SA_MAN','10500','0.2','100','80'), 
+('174','Ellen','Abel','EABEL','44.1644.429017','2004-05-11','SA_REP','11000','0.3','149','80'),
+('176','Jnathon','Taylor','JTAILOR','44.1644.429021','2008-03-24','SA_MAN','8600','0.2','149','80'), 
+('178','Kimberely','Grant','KGRANT','44.1644.429023','2009-05-24','SA_MAN','7000','0.15','149',''),
+('200','Jennifer','Whalem','JWHALEN','515.123.4444','2003-09-17','ADD_ASST','4400','','101','10'),
+('201','Michael','Hartstein',',HARTSTEIN','515.123.5555','2008-02-17','MK_MAN','13000','','100','20'),
+('202','Pat','Fay','PFAY','603.123.6666','2010-08-17','MK_REP','6000','','201','20'),
+('205','Shelley','Higgins','SHIGGINS','515.123.8050','2007-06-07','AC_MGR','12000','','101','110'),
+('206','William','Gietz','WGIETZ','515.123.8181','2007-06-07','AC_ACCOUNT','8300','','205','110');
+
+CREATE TABLE `cse311l_section_2_fall_20`.`locations` ( `Department_id` INT(4) NOT NULL , `Department_Name` VARCHAR(30) NOT NULL , `Manager_id` INT(6) NOT NULL , `Location_id` INT(4) NOT NULL )
