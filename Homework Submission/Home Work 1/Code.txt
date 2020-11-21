@@ -9,7 +9,8 @@ VALUES ('20', 'Marketing', '201', '1800'),
 
 
 
-CREATE TABLE `cse311l_section_2_fall_20`.`employees` ( `Employee_ID` INT(6) NULL DEFAULT NULL , `First_Name` VARCHAR(20) NULL DEFAULT NULL , `Last_Name` VARCHAR(25) NULL DEFAULT NULL , `Email` VARCHAR(25) NULL DEFAULT NULL , `Phone_Number` VARCHAR(15) NULL DEFAULT NULL , `Hire_Date` DATE NULL DEFAULT NULL , `Job_ID` VARCHAR(10) NULL DEFAULT NULL , `Salary` INT(8) NULL DEFAULT NULL , `Commission_pct` FLOAT NULL DEFAULT NULL , `Manager_ID` INT(6) NULL DEFAULT NULL , `Department_ID` INT(4) NULL DEFAULT NULL )
+CREATE TABLE `cse311l_section_2_fall_20`.`employees` 
+( `Employee_ID` INT(6) NULL DEFAULT NULL , `First_Name` VARCHAR(20) NULL DEFAULT NULL , `Last_Name` VARCHAR(25) NULL DEFAULT NULL , `Email` VARCHAR(25) NULL DEFAULT NULL , `Phone_Number` VARCHAR(15) NULL DEFAULT NULL , `Hire_Date` DATE NULL DEFAULT NULL , `Job_ID` VARCHAR(10) NULL DEFAULT NULL , `Salary` INT(8) NULL DEFAULT NULL , `Commission_pct` FLOAT NULL DEFAULT NULL , `Manager_ID` INT(6) NULL DEFAULT NULL , `Department_ID` INT(4) NULL DEFAULT NULL )
 INSERT INTO `employees`(`Employee_ID`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Hire_Date`, `Job_ID`, `Salary`, `Commission_pct`, `Manager_ID`, `Department_ID`) 
 VALUES ('102','Lex','De Haan','DEHAAN','515.123.4569','2009-01-13','AD_VP','17000','','100','90'),
 ('103','Alexader','Hunold','AHUNOLD','590.423.4567','2008-01-03','IT_PROG','9000',' ','102','60'), 
@@ -30,4 +31,12 @@ VALUES ('102','Lex','De Haan','DEHAAN','515.123.4569','2009-01-13','AD_VP','1700
 ('205','Shelley','Higgins','SHIGGINS','515.123.8050','2007-06-07','AC_MGR','12000','','101','110'),
 ('206','William','Gietz','WGIETZ','515.123.8181','2007-06-07','AC_ACCOUNT','8300','','205','110');
 
-CREATE TABLE `cse311l_section_2_fall_20`.`locations` ( `Department_id` INT(4) NOT NULL , `Department_Name` VARCHAR(30) NOT NULL , `Manager_id` INT(6) NOT NULL , `Location_id` INT(4) NOT NULL )
+
+
+CREATE TABLE locations ( Location_id INT(4) PRIMARY KEY, Street_Address VARCHAR(30), Postal_Code VARCHAR(30), City VARCHAR(50), State_Province VARCHAR(50), Country_ID VARCHAR(10))
+INSERT INTO `locations`(`Location_id`, `Street_Address`, `Postal_Code`, `City`, `State_Province`, `Country_ID`) 
+VALUES ('1400','2014 Jabberwocky Rd','26192','Southlake','Texas','US'), 
+('1500','2011 Interiors Blvd','99236','South San Francisco','California','US'), 
+('1700','2004 Charade Rd','98199','Seattle','Washington','US'), 
+('1800','460 Bloor St. W.','ON M5S 1X8','Toronto','Ontario','CA'), 
+('2500','Magdalen Centre- The Oxford Sc. Park','OX9 9ZB','Oxford','Oxford','UK');
