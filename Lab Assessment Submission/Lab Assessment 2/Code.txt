@@ -1,0 +1,6 @@
+Activity 1
+SELECT e.Last_Name, d.Department_id AS "department number", d.Department_Name from employees e, departments d WHERE e.Department_ID= d.Department_id
+
+
+Activity 3
+SELECT Last_Name, Salary/4 AS "weekly salary", Department_ID AS "Department number" FROM employees
