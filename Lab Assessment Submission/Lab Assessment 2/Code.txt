@@ -4,3 +4,8 @@ SELECT e.Last_Name, d.Department_id AS "department number", d.Department_Name fr
 
 Activity 3
 SELECT Last_Name, Salary/4 AS "weekly salary", Department_ID AS "Department number" FROM employees
+
+Activity 2
+SELECT Last_Name AS "last name", Job_ID AS "job ID", Hire_Date FROM employees WHERE Hire_Date BETWEEN 1998-02-28 AND 1998-05-01 ORDER BY Hire_Date
+
+Note: No data was found in this range so no printable data
