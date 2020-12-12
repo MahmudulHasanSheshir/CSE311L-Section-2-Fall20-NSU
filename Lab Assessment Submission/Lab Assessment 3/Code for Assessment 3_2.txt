@@ -1,0 +1,7 @@
+Activity 1:
+
+SELECT Last_Name, Salary FROM employees WHERE Manager_ID = (SELECT Employee_ID FROM employees WHERE Last_Name = 'King')
+
+Activity 2:
+
+SELECT Employee_ID, Last_Name, Salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees) AND Department_ID IN (SELECT Department_ID FROM employees WHERE Last_Name LIKE '%u%')

@@ -1,0 +1,7 @@
+Activity 1: 
+
+SELECT Last_Name, Hire_Date FROM employees WHERE Department_ID= (SELECT Department_ID FROM employees WHERE Last_Name= 'Zlotkey') AND Last_Name <> 'Zlotkey'
+
+Activity 2:
+
+SELECT Employee_ID, Last_Name, Salary FROM employees WHERE Salary > (SELECT AVG(Salary) FROM employees) ORDER BY Salary
