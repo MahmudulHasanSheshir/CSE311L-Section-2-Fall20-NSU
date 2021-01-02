@@ -1,7 +1,7 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "login_form");
+$link = mysqli_connect("localhost", "root", "", "mid-term-su");
  
 // Check connection
 if($link === false){
@@ -9,11 +9,13 @@ if($link === false){
 }
  
 // Attempt create table query execution
-$sql = "CREATE TABLE users(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+$sql = "CREATE TABLE catalog(
+    sid INT(9),
+    pid INT(9),
+    cost FLOAT(10),
+    PRIMARY KEY(sid,pid),
+    FOREIGN KEY(sid) REFERENCES suppliers(sid),
+    FOREIGN KEY(pid) REFERENCES parts(pid)
 )";
 if(mysqli_query($link, $sql)){
     echo "Table created successfully.";

@@ -11,7 +11,7 @@ if($link === false){
 // Attempt create table query execution
 $sql = "CREATE TABLE users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL UNIQUE,8
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )";
