@@ -9,10 +9,10 @@ if($link === false){
 }
  
 // Attempt insert query execution
-$sql = "SELECT First_Name, job_Id, SUM(Salary), AVG(Salary), MAX(Salary), MIN(Salary)
-FROM employees 
-WHERE department_id = '90' 
-GROUP BY job_id;
+$sql = "SELECT First_Name AS Name, Manager_ID, max(Salary) 
+    FROM employees WHERE Manager_ID IS NOT NULL 
+    GROUP BY Manager_ID
+    HAVING min(Salary) > 6000 ORDER BY min(Salary) desc;
 ";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";

@@ -9,10 +9,10 @@ if($link === false){
 }
  
 // Attempt insert query execution
-$sql = "SELECT First_Name, job_Id, SUM(Salary), AVG(Salary), MAX(Salary), MIN(Salary)
-FROM employees 
-WHERE department_id = '90' 
-GROUP BY job_id;
+$sql = "SELECT d.Department_Name , d.Location_id, COUNT(*) AS NUMBER OF PEOPLE , round(avg(e.Salary),2)
+ FROM departments d, employees e  
+ WHERE e.Department_ID=d.Department_id 
+ GROUP BY d.Department_name,d.Location_id;
 ";
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";
