@@ -1,0 +1,20 @@
+1.1
+
+SELECT S.sname AS Name FROM student_data S WHERE S.majoR ='History' OR S.snum IN (SELECT E.snum FROM class C, enrolled E, faculty F WHERE E.cname = C.name AND C.fid= F.fid AND F.fname= "Ivana Tech" )
+
+
+2.1
+
+select S.sname from suppliers S where not exists((select P.pid FROM parts P) except (select C.pid from catalog C where C.sid=S.sid) );
+
+2.2
+
+select S.sname from catalog C, suppliers S where S.sname LIKE "%Acme Widget%" and C.sid=S.sid
+
+2.3
+
+select S.sid from suppliers S where not exists((select P.pid from parts P where P.color='red') except (select C.pid from catalog C where C.sid=S.sid) )
+
+2.4
+
+select S.sname from suppliers S where not exists((select P.pid from Parts P where P.color='red' AND P.color='green') except (select C.pid from Catalog C where C.sid=S.sid) )
